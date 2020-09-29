@@ -31,3 +31,4 @@ def puzzle5():
 def puzzle6():
     answer = "1999"
     return 'Hello, World!'
+
