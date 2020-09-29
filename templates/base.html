@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+          <title>Scavenger Hunt</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Your page content -->
+
+
+        {% block content %}
+        <div class="jumbotron text-center">
+  <h1>Digital Scavenger Hunt</h1>
+  <p>Watch the video and answer the question correctly to move on.</p>
+    <p>You may have to google for more information.</p>
+                <p>There's enough info in the videos to get you started.</p>
+</div>
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center">
+
+                {% block video %}{% endblock %}
+            </div>
+              </div>
+
+                        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 d-flex justify-content-center">
+<div class="form-group">
+    <H3>{% block question %}{% endblock %}</H3>
+  <input type="text" class="form-control" id="answer">
+    <button type="button" class="btn btn-primary">Submit</button>
+</div>
+
+            </div>
+              </div>
+        </div>
+
+        {% endblock %}
+    </body>
+</html>
