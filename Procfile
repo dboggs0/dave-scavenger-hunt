@@ -1,1 +1,1 @@
-web: sh runServer.sh
+web: py routes.py
