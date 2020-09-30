@@ -1,1 +1,1 @@
-web: wsgi
+web: runServer.sh
