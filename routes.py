@@ -82,7 +82,7 @@ def puzzle6():
 		if answerCheck('6', request.args['answer']):
 			return redirect(url_for('goodbye'))
 		else:
-			return render_template('puzzle6html', returnRoute=url_for('puzzle6'))
+			return render_template('puzzle6.html', returnRoute=url_for('puzzle6'))
 	else:
 		return render_template('puzzle6.html', returnRoute=url_for('puzzle6'))
 
@@ -94,7 +94,7 @@ def goodbye():
 
 def answerCheck(puzzle_number, answer):
 	# TODO switch answer to lower case
-	if answerKey[puzzle_number] == answer:
+	if answerKey[puzzle_number] == answer.lower():
 		return True
 	else:
 		return False
