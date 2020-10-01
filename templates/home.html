@@ -6,14 +6,23 @@
 {% block content %}
 {{ super() }}
 
+{% block jumbotronMesg %}{% endblock %}
+
+<button type="button" class="btn btn-primary" onclick="window.location.href='/puzzle1'">Start The Hunt</button>
+
 {% endblock %}
 
-{% block video %}
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zBJU9ndpH1Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-{% endblock %}
 
 {% block question %}
-How many columns of hats did Ron knock down?
+
+Welcome to my digital scavenger hunt!<br><br>
+<h6>
+On the folloing pages you will see a series of short YouTube videos. <br><br>
+    Watch the video and answer the question on each page to move on.<br><br>
+    Use Google and the YouTube video comments to their full benefit.<br><br>
+    There's enough info in the each video to get you started.
+</h6>
 
 {% endblock %}
+
+{% block answer %}{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+{% block content %}
+{{ super() }}
+
+{% block jumbotronMesg %}{% endblock %}
+
+<button type="button" class="btn btn-primary" onclick="window.location.href='/'">Start Over</button>
+
+{% endblock %}
+
+
+{% block question %}
+
+Great job!<br><br>
+<h6>
+You've completed my digital scavenger hunt!
+</h6>
+
+{% endblock %}
+
+{% block answer %}{% endblock %}

@@ -18,10 +18,13 @@
         {% block content %}
         <div class="jumbotron text-center">
   <h1>Digital Scavenger Hunt</h1>
+            <h2>By: Dave Boggs</h2>
+            {% block jumbotronMesg %}
   <p>Watch the video and answer the question correctly to move on.</p>
     <p>You may have to google for more information.</p>
                 <p>There's enough info in the videos to get you started.</p>
 </div>
+        {% endblock %}
         <div class="container-fluid">
             <div class="row d-flex justify-content-center">
             <div class="col-md-6 d-flex justify-content-center">
@@ -33,9 +36,16 @@
                         <div class="row d-flex justify-content-center">
             <div class="col-md-12 d-flex justify-content-center">
 <div class="form-group">
+    <br>
     <H3>{% block question %}{% endblock %}</H3>
-  <input type="text" class="form-control" id="answer">
-    <button type="button" class="btn btn-primary">Submit</button>
+    {% block answer %}
+<form action="{{ returnRoute }}
+">
+<br>
+  <input type="text" id="answer" name="answer" value=""><br><br>
+  <input type="submit" value="Submit">
+</form>
+    {% endblock %}
 </div>
 
             </div>
