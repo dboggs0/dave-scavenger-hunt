@@ -93,7 +93,6 @@ def goodbye():
 
 
 def answerCheck(puzzle_number, answer):
-	# TODO switch answer to lower case
 	if answerKey[puzzle_number] == answer.lower():
 		return True
 	else:
